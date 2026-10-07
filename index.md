@@ -52,6 +52,10 @@ title: Manual de operación
     <figcaption>Requisiciones, recepción parcial, existencias por obra y kárdex.</figcaption>
   </figure>
   <figure class="screen-card">
+    <img src="{{ site.baseurl }}/screenshots/compras-almacen-mobile.png" alt="Compras y almacén en pantalla móvil">
+    <figcaption>El módulo se adapta a pantallas pequeñas; la navegación móvil permanece accesible.</figcaption>
+  </figure>
+  <figure class="screen-card">
     <img src="{{ site.baseurl }}/screenshots/planos-cuantificacion.png" alt="Módulo de planos y cuantificación preliminar de Trazo">
     <figcaption>Expediente de planos y cantidades preliminares que requieren validación.</figcaption>
   </figure>
@@ -125,7 +129,7 @@ En **Planos**, selecciona una obra y adjunta una fotografía o PDF acotado. Capt
 
 La lectura opcional con OpenAI requiere configurar una API key de OpenAI Platform y confirmar cada envío. Solo se envía el plano elegido; la respuesta puede proponer cotas explícitas legibles, no se guarda automáticamente y debe validarla una persona. El uso de API se cobra por separado de una suscripción ChatGPT.
 
-### 8. Recuperar acceso y proteger información
+### 9. Recuperar acceso y proteger información
 
 Los enlaces de recuperación son de un solo uso y vencen en 60 minutos. No compartas enlaces de recuperación, contraseñas o claves de OpenAI. Si cambias de teléfono, inicia sesión desde un dispositivo confiable y consulta al administrador antes de borrar los datos locales si hay gastos pendientes.
 
