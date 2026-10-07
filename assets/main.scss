@@ -1,0 +1,157 @@
+---
+---
+
+@import "minima";
+
+:root {
+  --trazo-blue: #174994;
+  --trazo-ink: #27313d;
+  --trazo-muted: #627084;
+  --trazo-paper: #f5f7fa;
+}
+
+body {
+  color: var(--trazo-ink);
+  background: var(--trazo-paper);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  border-top: 5px solid var(--trazo-blue);
+  background: #fff;
+}
+
+.site-title, .site-title:visited, .site-nav .page-link {
+  color: var(--trazo-ink);
+}
+
+.site-logo {
+  max-height: 44px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.page-content {
+  padding-top: 36px;
+}
+
+.wrapper {
+  max-width: 1080px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, .6fr);
+  gap: 28px;
+  align-items: center;
+  padding: 32px;
+  border: 1px solid #e0e6ef;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 40px rgb(31 48 71 / 7%);
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  color: var(--trazo-ink);
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.05;
+}
+
+.hero p {
+  color: var(--trazo-muted);
+  font-size: 1.08rem;
+}
+
+.hero-logo {
+  display: block;
+  width: min(100%, 300px);
+  margin: auto;
+}
+
+.button-link {
+  display: inline-block;
+  margin: 8px 8px 4px 0;
+  padding: 11px 16px;
+  border-radius: 8px;
+  background: var(--trazo-blue);
+  color: #fff !important;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.button-link.secondary {
+  border: 1px solid #dce3ed;
+  background: #fff;
+  color: var(--trazo-blue) !important;
+}
+
+.notice {
+  padding: 15px 18px;
+  border-left: 4px solid var(--trazo-blue);
+  border-radius: 8px;
+  background: #eaf1fc;
+}
+
+.screen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.screen-card {
+  overflow: hidden;
+  padding: 12px;
+  border: 1px solid #e0e6ef;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.screen-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #edf0f4;
+  border-radius: 8px;
+}
+
+.screen-card figcaption {
+  padding: 9px 2px 1px;
+  color: var(--trazo-muted);
+  font-size: .92rem;
+}
+
+table {
+  display: table;
+  width: 100%;
+  overflow-x: auto;
+}
+
+th {
+  background: #eaf1fc;
+}
+
+td, th {
+  padding: 9px 10px;
+  vertical-align: top;
+}
+
+@media (max-width: 680px) {
+  .hero, .screen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .hero {
+    padding: 23px;
+  }
+
+  .hero-logo {
+    width: min(80%, 220px);
+  }
+}

@@ -1,0 +1,14 @@
+title: Trazo · Manual de operación
+description: Guía del propietario de Trazo, Rodríguez Arquitectos.
+url: https://rickrgr-22.github.io
+baseurl: /trazo-manual
+theme: minima
+logo: /trazo-manual/assets/logo-rodriguez-arquitectos.jpg
+header_pages:
+  - index.md
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude:
+  - README.md
