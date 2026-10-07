@@ -97,9 +97,9 @@ En **Gastos**, selecciona la obra, categoría, concepto, proveedor, fecha, impor
 
 ### 3. Preparar cotizaciones
 
-En **Cotizaciones**, elige la obra. En **Agregar cuantificación desde planos**, selecciona una medición guardada en **Planos**. Para muros de block, tabique o tabicón, Trazo propone las piezas calculadas con el coeficiente y desperdicio registrados; puedes elegir una referencia de precio por pieza del catálogo. Si la medición incluye productividad, puedes añadir jornadas con el jornal de un trabajador activo. La referencia de proveedor/fecha y los supuestos de cálculo quedan guardados en el desglose interno.
+En **Cotizaciones**, elige la obra. En **Agregar cuantificación desde planos**, selecciona una medición previamente guardada en **Planos**. Para muros de block, tabique o tabicón, Trazo propone las piezas calculadas con el coeficiente y desperdicio registrados; puedes elegir una referencia de precio por pieza del catálogo. Si la medición incluye productividad, puedes añadir también jornadas con el jornal de un trabajador activo. La referencia de proveedor/fecha y los supuestos de cálculo quedan guardados en el desglose interno de la partida.
 
-Las cantidades y tarifas son preliminares: comprueba cotas, huecos, coeficiente, desperdicio, vigencia del precio, cuadrilla y condiciones reales. Sin precio de catálogo, captura el precio unitario antes de guardar. Después agrega o edita partidas y captura los porcentajes de indirectos, utilidad e IVA. Guarda una revisión para conservar versiones. Cambia el estado a **Enviada** cuando la compartas y a **Aprobada** cuando el cliente la autorice; la aprobación actualiza el presupuesto autorizado. Usa la opción de impresión del navegador y **Guardar como PDF** para conservar o compartir el documento con el logotipo.
+Las cantidades y tarifas son preliminares: comprueba cota, huecos, coeficiente, desperdicio, vigencia del precio, cuadrilla y condiciones reales. Sin precio de catálogo, captura el precio unitario antes de guardar. Después agrega o edita las partidas necesarias y captura los porcentajes de indirectos, utilidad e IVA. Guarda una revisión para conservar versiones. El arquitecto controla los estados: marca **Enviada** cuando comparta la propuesta fuera de Trazo y **Aprobada** cuando autorice internamente ese presupuesto como base de obra. No hay portal ni aprobación del cliente dentro de la app. Usa la opción de impresión del navegador y **Guardar como PDF** para conservar o compartir el documento con el logotipo.
 
 ### 4. Mano de obra y raya
 
@@ -123,11 +123,13 @@ Cada seis meses:
 
 Ejemplos de registros manuales: arena, grava, tepetate, camiones de volteo, viajes de escombro y renta de retroexcavadora por día u hora. No se buscarán estos precios en páginas web, porque son servicios y precios locales que requieren cotización directa.
 
-**Precios web:** el catálogo ya permite guardar un precio publicado con enlace a su fuente; las sugerencias actuales de Trazo usan precios que el despacho verificó y capturó durante los últimos seis meses. Los precios más antiguos no se proponen como vigentes. La consulta automática de publicaciones de proveedores de Querétaro aún no está habilitada. Se conserva como evolución para materiales con precio público; nunca debe sustituir cotizaciones locales ni inventar precios.
+**Precios web:** el catálogo ya permite guardar un precio publicado con enlace a su fuente; las sugerencias actuales de Trazo usan precios que el despacho verificó y capturó durante los últimos seis meses. Los más antiguos no se proponen como vigentes. La consulta automática de publicaciones de proveedores de Querétaro aún no está habilitada. Se conserva como evolución para materiales con precio público; nunca debe sustituir cotizaciones locales ni inventar precios.
 
 ### 7. Compras y almacén
 
-En **Compras / almacén**, selecciona la obra y un proveedor registrado en Querétaro; agrega los materiales solicitados, unidad, cantidad y precio estimado. Guarda la requisición como borrador y envíala cuando esté lista. Revisa la información y pulsa **Aprobar compra**. Al recibir el material, captura la cantidad recibida, costo real, fecha y forma de pago. La recepción puede hacerse en varias entregas; cada una crea el gasto de materiales y la entrada de existencias correspondientes.
+En **Compras / almacén**, crea una requisición por obra y agrega materiales, unidades, cantidades y, si se conoce, un precio de referencia. En cada borrador o solicitud abre **Agregar cotización o precio de referencia** para capturar una oferta completa por proveedor, con fecha, fuente, precios unitarios, flete/otros cargos y folio. Se pueden registrar varias ofertas y comparar el total del pedido y sus precios por partida. Elige la oferta que autorizará el arquitecto y envía la requisición a revisión; solo entonces queda habilitada **Autorizar compra**. El propietario/arquitecto es quien aprueba; no hay aprobación del cliente.
+
+Una opción **Precio publicado** permite guardar manualmente el precio consultado en internet y su URL como evidencia. Trazo no busca ni actualiza esos precios automáticamente: verifica la fecha, vigencia, disponibilidad, flete e impuestos antes de seleccionar una oferta. Al recibir al proveedor elegido, captura la cantidad real, costo, fecha y forma de pago. La recepción puede hacerse en varias entregas; cada una crea el gasto de materiales y la entrada de existencias correspondientes.
 
 La sección de **Solicitudes y compras** muestra el estado y las cantidades recibidas de cada partida. En **Almacén** consulta existencias por obra y niveles mínimos; **Kárdex** muestra las entradas y salidas recientes. Para registrar consumo, selecciona material/obra, tipo **Salida**, cantidad, fecha y destino o motivo. Los ajustes requieren motivo y el sistema rechaza movimientos que dejen una existencia negativa. Solo la captura de gastos tiene cola sin conexión; requisiciones y movimientos de almacén requieren conexión.
 
@@ -135,13 +137,13 @@ La sección de **Solicitudes y compras** muestra el estado y las cantidades reci
 
 ### 8. Cobranza de clientes
 
-En **Cobranza**, registra un anticipo, estimación, finiquito u otro cargo para una obra, con concepto, importe, fecha de emisión y vencimiento. Si eliges una cotización aprobada, puedes dividir su total en cuentas; Trazo impide asignar cargos que superen el importe aprobado.
+En **Cobranza**, registra un anticipo, estimación, finiquito u otro cargo para una obra, con concepto, importe, fecha de emisión y vencimiento. Si eliges una cotización aprobada, puedes dividir su total en cuentas (por ejemplo, anticipo y estimaciones); Trazo impide asignar más que el importe aprobado. Los cargos no asociados a una cotización pueden usarse para registrar otros acuerdos autorizados.
 
-Abre **Registrar abono** para guardar importe, fecha, forma de pago y referencia/folio. Se permiten pagos parciales; el saldo se valida y el historial queda guardado. El resumen por obra muestra cobrado, pendiente y vencido; puedes descargar el reporte como CSV. La cobranza no es una factura fiscal ni sustituye la conciliación bancaria.
+Abre **Registrar abono** en una cuenta pendiente para guardar importe, fecha, forma de pago y referencia/folio. Se permiten pagos parciales; Trazo valida el saldo restante y conserva el historial. El resumen por obra muestra lo cobrado y pendiente; el módulo señala cuentas vencidas y permite descargar el reporte como CSV para abrirlo en Excel. La cobranza no es una factura fiscal ni sustituye la conciliación bancaria.
 
 ### 9. Planos y cuantificación preliminar
 
-En **Planos**, selecciona una obra y adjunta una fotografía desde el celular (la cámara trasera se ofrece como opción) o un PDF acotado. Captura manualmente longitud, altura y área de huecos. Trazo calcula el área neta y unidades aproximadas con un coeficiente editable; puede calcular persona-días si se registra productividad. Asocia la medición al documento y revisa los resultados. En **Cotizaciones**, selecciona esa medición para proponer una partida de piezas de muro; si eliges una referencia, se guardan proveedor y fecha del precio, y la tarifa/rendimiento de mano de obra registrados. No es un cálculo estructural ni una cuantificación integral.
+En **Planos**, selecciona una obra y adjunta una fotografía desde el celular (la cámara trasera se ofrece como opción) o un PDF acotado. Captura manualmente longitud, altura y área de huecos. Trazo calcula el área neta y unidades aproximadas con un coeficiente editable; puede calcular persona-días si se registra productividad. Asocia la medición al documento y revisa los resultados antes de usarlos. En **Cotizaciones**, elige esa medición para proponer una partida de piezas de muro; si se selecciona una referencia, se guardan el proveedor y fecha del precio, y la tarifa/rendimiento de mano de obra registrados. No es un cálculo estructural ni una cuantificación integral.
 
 La lectura opcional con OpenAI requiere configurar una API key de OpenAI Platform y confirmar cada envío. Solo se envía el plano elegido; la respuesta puede proponer cotas explícitas legibles, no se guarda automáticamente y debe validarla una persona. El uso de API se cobra por separado de una suscripción ChatGPT.
 
@@ -151,25 +153,25 @@ Los enlaces de recuperación son de un solo uso y vencen en 60 minutos. No compa
 
 ## Funciones de la propuesta integral y estado de Trazo
 
-La propuesta describe un sistema integral con 20 áreas. Este manual las incluye para orientar el alcance y la evolución, pero no todas están implementadas en la aplicación actual. **Disponible** indica que el flujo está operativo; **Parcial** indica que existe una base, pero faltan funciones importantes; **Pendiente** significa que todavía no existe; **Fuera de alcance** indica que el propietario confirmó que no requiere esa función.
+La propuesta describe un sistema integral con 20 áreas. Este manual las incluye para orientar el alcance y la evolución, pero no todas están implementadas en la aplicación actual. **Disponible** indica que el flujo está operativo; **Parcial** indica que existe una base, pero faltan funciones importantes; **Pendiente** significa que el módulo aún no está implementado; **Fuera de alcance** indica que el propietario confirmó que no requiere esa función.
 
 | # | Funcionalidad solicitada en el PDF | Estado | Cobertura actual / límite principal |
 | --- | --- | --- | --- |
 | 1 | Obras y expediente integral | Parcial | Alta de obra y expediente de planos; faltan código único, responsables y expediente completo. |
 | 2 | Planos, cuantificación y presupuesto | Parcial | Medición preliminar de algunos muros; puede insertar sus piezas en una cotización, pero no cuantifica toda la obra ni la genera automáticamente. |
 | 3 | Presupuestos profesionales y versiones | Parcial | Cotizaciones versionadas con partidas y porcentajes; faltan análisis completos de rendimientos y costos. |
-| 4 | Explosión de insumos | Parcial | Inserta piezas de algunos muros y mano de obra opcional; no calcula todos los insumos ni controla requerido, comprado, recibido y consumido. |
-| 5 | Requisiciones, compras y proveedores | Parcial | Requisiciones por obra, aprobación, recepción parcial y gasto automático; faltan comparación de cotizaciones, autorización por rol y evaluación de proveedor. |
+| 4 | Explosión de insumos | Parcial | Inserta piezas de algunos muros y, opcionalmente, mano de obra; no calcula todos los insumos ni controla requerido, comprado, recibido y consumido. |
+| 5 | Requisiciones, compras y proveedores | Parcial | Requisiciones por obra, comparativo de ofertas/precios, selección y autorización del arquitecto, recepción parcial y gasto automático; faltan seguimiento de entrega y evaluación de proveedor. |
 | 6 | Almacén por obra | Parcial | Entradas, salidas, ajustes, existencias por obra, kardex y mínimos; faltan devoluciones, traspasos y conciliación física. |
 | 7 | Personal, asistencia y nómina | Parcial | Jornadas, raya, anticipos y pagos; falta asistencia e incidencias de nómina completas. |
-| 8 | Destajos y contratistas | Fuera de alcance | El propietario confirmó que no requiere un módulo de contratistas; se conservan los destajos básicos en Mano de obra. |
+| 8 | Destajos y contratistas | Fuera de alcance | El propietario no requiere un módulo de contratistas; se conserva la captura básica de destajos y pagos semanales en Mano de obra. |
 | 9 | Programa y avance | Parcial | Avance general y fechas; no hay Gantt ni comparación planeado vs. real. |
 | 10 | Bitácora digital | Parcial | Notas, fotos y ubicación opcional; faltan reportes y campos operativos adicionales. |
-| 11 | Control financiero | Parcial | Presupuesto, gastos y cobranza con abonos, saldos y vencidos; faltan comprometidos, cuentas por pagar y utilidad real. |
+| 11 | Control financiero | Parcial | Presupuesto, gastos, cuentas por cobrar, abonos, saldos y vencidos; faltan comprometidos, cuentas por pagar y utilidad real. |
 | 12 | Trabajos extraordinarios | Pendiente | No existe flujo de órdenes de cambio. |
-| 13 | Atención y cobranza de clientes | Parcial | Cuentas por cobrar y pagos por obra; faltan CRM, seguimiento y recordatorios. |
+| 13 | Atención y cobranza de clientes | Parcial | Cliente en obra, cuentas por cobrar y pagos; faltan CRM, seguimiento y recordatorios. |
 | 14 | Reportes automáticos | Parcial | Cotización imprimible y cobranza exportable a CSV; faltan reportes ejecutivos integrales. |
-| 15 | Tablero directivo | Parcial | Presupuesto, gasto, avance, alertas y resumen de cobranza; faltan indicadores financieros avanzados. |
+| 15 | Tablero directivo | Parcial | Presupuesto, gasto, avance, vencidos y resumen de cobranza; faltan indicadores financieros avanzados. |
 | 16 | Indirectos y gastos generales | Parcial | Porcentajes de cotización y gastos; falta el control integral de indirectos. |
 | 17 | Inteligencia artificial | Parcial | Lectura preliminar de cotas; no genera presupuesto, explosión ni decisiones autónomas. |
 | 18 | Flujo de obra integrado | Parcial | Módulos operativos separados; no hay un proceso integral automatizado. |
