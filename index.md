@@ -158,6 +158,15 @@ En **Cobranza**, registra un anticipo, estimación, finiquito u otro cargo para 
 
 Abre **Registrar abono** en una cuenta pendiente para guardar importe, fecha, forma de pago y referencia/folio. Se permiten pagos parciales; Trazo valida el saldo restante y conserva el historial. El resumen por obra muestra lo cobrado y pendiente; el módulo señala cuentas vencidas y permite descargar el reporte como CSV para abrirlo en Excel. La cobranza no es una factura fiscal ni sustituye la conciliación bancaria.
 
+### Reportes financieros
+
+1. Abre **Reportes** desde el menú de Trazo.
+2. Define las fechas **Desde** y **Hasta**. Opcionalmente selecciona una obra; deja **Todas las obras** para ver el portafolio.
+3. Pulsa **Actualizar reporte** para revisar presupuesto, gasto acumulado, compras aprobadas aún no recibidas, cuentas facturadas/cobradas/pendientes/vencidas y flujo neto del periodo.
+4. Pulsa **Descargar CSV** para exportar el mismo corte filtrado y abrirlo en Excel.
+
+El flujo neto resta los gastos capturados a los pagos efectivamente recibidos en el periodo. La nómina pagada se muestra como indicador separado para no duplicar pagos que también se registraron como gasto. El saldo de presupuesto descuenta gastos acumulados y requisiciones aprobadas pendientes de recibir. Son cifras auxiliares de operación, no estados contables ni proyecciones de flujo.
+
 ### 9. Planos y cuantificación preliminar
 
 #### Preparar OpenAI (solo la primera vez)
@@ -207,7 +216,7 @@ La propuesta describe un sistema integral con 20 áreas. Este manual las incluye
 | 11 | Control financiero | Parcial | Presupuesto, gastos, cuentas por cobrar, abonos, saldos y vencidos; faltan comprometidos, cuentas por pagar y utilidad real. |
 | 12 | Trabajos extraordinarios | Pendiente | No existe flujo de órdenes de cambio. |
 | 13 | Atención y cobranza de clientes | Parcial | Cliente en obra, cuentas por cobrar y pagos; faltan CRM, seguimiento y recordatorios. |
-| 14 | Reportes automáticos | Parcial | Cotización imprimible y cobranza exportable a CSV; faltan reportes ejecutivos integrales. |
+| 14 | Reportes automáticos | Parcial | Cotización imprimible; cobranza y reporte financiero por obra/periodo exportables a CSV. Faltan reportes ejecutivos integrales. |
 | 15 | Tablero directivo | Parcial | Presupuesto, gasto, avance, vencidos y resumen de cobranza; faltan indicadores financieros avanzados. |
 | 16 | Indirectos y gastos generales | Parcial | Porcentajes de cotización y gastos; falta el control integral de indirectos. |
 | 17 | Inteligencia artificial | Parcial | Lectura preliminar de cotas; no genera presupuesto, explosión ni decisiones autónomas. |
