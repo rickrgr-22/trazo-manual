@@ -85,9 +85,18 @@ title: Manual de operación
 
 ## Operación diaria
 
-### 1. Crear y revisar obras
+### 1. Dar de alta una obra
 
-En **Obras**, registra nombre, cliente, ubicación, tipo de proyecto (proyecto ejecutivo, construcción o remodelación), presupuesto autorizado, fechas y avance. El tablero muestra el presupuesto, los gastos y el porcentaje de avance; presenta una alerta al alcanzar el 90 % del presupuesto. Mantén las fechas y el avance actualizados.
+1. Abre **Obras** en el menú lateral y pulsa **Nueva obra**. Si aún no existe ninguna, también puedes usar **Nueva obra** en la parte superior o **Crear primera obra** en el tablero.
+2. Escribe el **Nombre de la obra** y el **Cliente**.
+3. Elige el **Tipo de obra**: Construcción, Obra nueva, Ampliación, Mejoramiento, Remodelación, Detallado o Proyecto ejecutivo.
+4. Revisa el **Sistema constructivo principal**. Trazo lo sugiere de acuerdo con el tipo; puedes cambiarlo según los planos y el criterio del arquitecto. La pantalla también presenta **Insumos/servicios a considerar** como guía, no como partidas aprobadas.
+5. Captura la **Ubicación**, el **Presupuesto autorizado**, el **Avance actual (%)**, la **Fecha de inicio** y, si se conoce, la **Fecha estimada de entrega**.
+6. Pulsa **Crear obra**. Confirma que aparezca en **Obras** y en el tablero.
+
+El tipo y sistema constructivo se mostrarán después en **Cotizaciones** para sugerir materiales y servicios relacionados. Las sugerencias no calculan cantidades, no consultan precios automáticamente ni reemplazan el presupuesto profesional. Actualiza el avance y presupuesto autorizado conforme al control del arquitecto; el tablero alerta al llegar al 90 % del presupuesto.
+
+![Tablero de Trazo y acceso al portafolio de obras](screenshots/dashboard-desktop.png)
 
 ### 2. Registrar gastos y comprobantes
 
@@ -95,11 +104,19 @@ En **Gastos**, selecciona la obra, categoría, concepto, proveedor, fecha, impor
 
 **Sin señal:** los gastos y sus fotografías pueden quedar en la cola local del dispositivo y sincronizarse cuando vuelva la conexión. Abre la PWA mientras tengas señal antes de ir a la obra; confirma que los pendientes se hayan enviado antes de cerrar sesión o borrar los datos del navegador. Las demás operaciones requieren conexión.
 
-### 3. Preparar cotizaciones
+### 3. Generar una cotización con el tipo de obra y las medidas
 
-En **Cotizaciones**, elige la obra. En **Agregar cuantificación desde planos**, selecciona una medición previamente guardada en **Planos**. Para muros de block, tabique o tabicón, Trazo propone las piezas calculadas con el coeficiente y desperdicio registrados; puedes elegir una referencia de precio por pieza del catálogo. Si la medición incluye productividad, puedes añadir también jornadas con el jornal de un trabajador activo. La referencia de proveedor/fecha y los supuestos de cálculo quedan guardados en el desglose interno de la partida.
+1. Abre **Cotizaciones** y selecciona la **Obra** correcta. Escribe el **Nombre de la propuesta**.
+2. Revisa el bloque **Sugerencias por tipo de obra**. Confirma que el tipo y sistema sean los esperados, y pulsa **Agregar insumos sugeridos a la cotización** si quieres incorporarlos. Las partidas se agregan sin cantidad ni precio: completa ambos datos y elimina o edita lo que no corresponda a este alcance.
+3. En **Agregar cuantificación a la cotización**, selecciona una **Medición de muro** guardada en Planos. Esta conversión automática está disponible para muros de block, tabique y tabicón. La lista muestra el nombre editable de la medida, área neta y piezas estimadas.
+4. De manera opcional, selecciona un **Precio de catálogo** vigente (proveedor, municipio y fecha) y una **Tarifa de mano de obra** si la medición tiene rendimiento y hay un trabajador activo. Si no existe precio vigente, Trazo deja el precio unitario pendiente para que lo captures.
+5. Pulsa **Agregar material** o **Agregar material y mano de obra a la cotización**. Trazo incorpora esas partidas al formulario; todavía no guarda la propuesta. Comprueba las descripciones, unidades, cantidades, rendimiento, desperdicio, precio y condiciones reales de obra.
+6. Completa las demás partidas, cantidades y precios unitarios. Define **Indirectos (%)**, **Utilidad (%)** e **IVA (%)** y revisa el total.
+7. Pulsa **Guardar cotización en borrador**. En el historial puedes crear una nueva versión, marcarla **Enviada** cuando la compartas fuera de Trazo, exportar/imprimir como PDF y, cuando el arquitecto la autorice, pulsar **Aprobar presupuesto**.
 
-Las cantidades y tarifas son preliminares: comprueba cota, huecos, coeficiente, desperdicio, vigencia del precio, cuadrilla y condiciones reales. Sin precio de catálogo, captura el precio unitario antes de guardar. Después agrega o edita las partidas necesarias y captura los porcentajes de indirectos, utilidad e IVA. Guarda una revisión para conservar versiones. El arquitecto controla los estados: marca **Enviada** cuando comparta la propuesta fuera de Trazo y **Aprobada** cuando autorice internamente ese presupuesto como base de obra. No hay portal ni aprobación del cliente dentro de la app. Usa la opción de impresión del navegador y **Guardar como PDF** para conservar o compartir el documento con el logotipo.
+Al aprobarse, el total de esa versión se convierte en presupuesto autorizado de la obra. El arquitecto gestiona la aprobación dentro de Trazo; no hay aprobación del cliente en la aplicación.
+
+![Formulario de cotizaciones y propuestas versionadas](screenshots/cotizaciones.png)
 
 ### 4. Mano de obra y raya
 
@@ -143,9 +160,29 @@ Abre **Registrar abono** en una cuenta pendiente para guardar importe, fecha, fo
 
 ### 9. Planos y cuantificación preliminar
 
-En **Planos**, selecciona una obra y adjunta una fotografía desde el celular (la cámara trasera se ofrece como opción) o un PDF acotado. Captura manualmente longitud, altura y área de huecos. Trazo calcula el área neta y unidades aproximadas con un coeficiente editable; puede calcular persona-días si se registra productividad. Asocia la medición al documento y revisa los resultados antes de usarlos. En **Cotizaciones**, elige esa medición para proponer una partida de piezas de muro; si se selecciona una referencia, se guardan el proveedor y fecha del precio, y la tarifa/rendimiento de mano de obra registrados. No es un cálculo estructural ni una cuantificación integral.
+#### Preparar OpenAI (solo la primera vez)
 
-La lectura opcional con OpenAI requiere configurar una API key de OpenAI Platform y confirmar cada envío. Solo se envía el plano elegido; la respuesta puede proponer cotas explícitas legibles, no se guarda automáticamente y debe validarla una persona. El uso de API se cobra por separado de una suscripción ChatGPT.
+1. Confirma con el propietario que la cuenta de OpenAI Platform tiene método de pago, límites y presupuesto autorizados. El consumo de API se cobra por separado de una suscripción ChatGPT.
+2. En OpenAI Platform, crea una API key y vuelve a Trazo. No la envíes por correo, chat o capturas.
+3. Abre **OpenAI** en el menú, pega la clave en **API key**, revisa el **Modelo de OpenAI** y pulsa **Guardar conexión**.
+4. Pulsa **Probar conexión**. Esta prueba no envía planos; confirma que la configuración puede acceder al modelo. La clave se cifra en el servidor y no vuelve a mostrarse en pantalla.
+
+#### Subir el plano a la obra y analizarlo
+
+1. Abre **Planos** y, arriba, selecciona la misma obra que usarás en la cotización. Los documentos que subas se asocian a esa obra.
+2. En **Agregar plano**, pulsa el selector de archivo y elige un PDF acotado o una fotografía JPG, PNG o WebP (hasta 15 MB). En el celular puedes usar la cámara. Para analizarlo con OpenAI el archivo debe ser de hasta 10 MB.
+3. Pulsa **Guardar en expediente**. Espera a que el nombre aparezca en la lista de documentos de la obra. Pulsa **Abrir** para comprobar el archivo.
+4. Junto al documento, pulsa **Analizar con OpenAI**. Lee la confirmación y acepta el envío solo si tienes autorización para compartir ese plano con OpenAI y aceptas el cargo de API. Se envía el documento seleccionado, no todo el expediente.
+5. Revisa el resultado preliminar: tipo de documento, escala, cotas, evidencia y confianza indicativa. Corrige el campo **Nombre de la medida** para que identifique claramente el muro o ubicación; por ejemplo, “Fachada norte · M-01”. Un nombre vacío no se incluirá en el guardado en lote.
+6. Para revisar una medida individual, pulsa **Revisar en formulario**. Comprueba obra/plano, longitud, altura, huecos, coeficiente de piezas por m², desperdicio y productividad; luego pulsa **Guardar medición**. Copiar al formulario no guarda todavía la medición.
+7. Para guardar en una sola operación todas las sugerencias completas, revisa los nombres y el coeficiente de piezas/m² y pulsa **Guardar todas las mediciones completas**. Las medidas sin nombre, longitud o altura válidas se omiten. Si OpenAI no detectó huecos, el lote usa 0 m² de huecos; verifica ese supuesto. Confirma el aviso de guardado.
+8. En **Mediciones preliminares**, revisa área, piezas, plano vinculado y rendimiento. La medición guardada ya estará disponible al seleccionar esa misma obra en **Cotizaciones**.
+
+![Pantalla de Planos con selección de obra, expediente y formulario de medición](screenshots/planos-cuantificacion.png)
+
+También puedes omitir OpenAI y capturar directamente una medición: indica un nombre, selecciona el plano asociado, registra longitud, altura y área de huecos, revisa el coeficiente/desperdicio y pulsa **Guardar medición**. Trazo calcula superficies y cantidades geométricas preliminares para algunos muros; no es un cálculo estructural, no cuantifica toda la obra y no sustituye la validación profesional de escala, cotas, traslapes, refuerzos, desperdicio o especificación.
+
+El botón **Borrar plano** elimina el archivo del expediente tras pedir confirmación. Las mediciones que ya se guardaron se conservan, pero quedan desvinculadas de ese documento. Antes de analizar cualquier plano, confirma que puedes compartirlo; revisa también el consumo de OpenAI Platform.
 
 ### 10. Recuperar acceso y proteger información
 
